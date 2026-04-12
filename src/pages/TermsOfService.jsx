@@ -31,7 +31,7 @@ const sections = [
       },
       {
         subtitle: 'Service Plans',
-        text: 'We offer three subscription tiers — Essential ($50/month, 100 AI minutes), Performance ($150/month, 300 AI minutes), and Enterprise ($200/month, 600 AI minutes) — each subject to a one-time $300 setup fee. Features and included minutes vary by plan as described on our pricing page.',
+        text: 'We offer three subscription tiers — Essential ($159/month, 200 AI minutes, $200 setup fee), Performance ($299/month, 500 AI minutes, $500 setup fee), and Enterprise ($499/month, 1,000 AI minutes, $1,000 setup fee). Additional minutes beyond each plan\'s included allowance are billed at $0.80 per minute. Features vary by plan as described on our pricing page.',
       },
     ],
   },
@@ -57,7 +57,7 @@ const sections = [
     content: [
       {
         subtitle: 'Setup Fee',
-        text: 'All plans require a one-time $300 setup fee, which covers AI agent configuration, voice customisation, integration with your existing tools, and onboarding. This fee is non-refundable once setup has commenced.',
+        text: 'Each plan requires a one-time setup fee (Essential: $200 · Performance: $500 · Enterprise: $1,000), which covers AI agent configuration, voice customisation, GoHighLevel and n8n integration, and onboarding. Setup fees are non-refundable once setup has commenced.',
       },
       {
         subtitle: 'Monthly Subscription',
@@ -82,7 +82,7 @@ const sections = [
       },
       {
         subtitle: 'Overage',
-        text: 'If your account exceeds the included minutes in any billing period, additional minutes will be charged at the current overage rate. We will notify you when usage approaches your plan limit.',
+        text: 'If your account exceeds the included minutes in any billing period, additional minutes are charged at $0.80 per minute. We will notify you when usage approaches your plan limit.',
       },
     ],
   },

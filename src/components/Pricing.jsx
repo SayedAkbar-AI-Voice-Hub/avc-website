@@ -10,31 +10,33 @@ const CAL_LINK = 'https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-ag
 const tiers = [
   {
     name: 'Essential',
-    minutes: '100 Minutes/mo',
-    price: '$50',
+    minutes: '200 Minutes/mo',
+    price: '$159',
     period: '/month',
-    setup: 'Setup Fee: $300',
     features: [
+      '200 AI minutes included',
+      '$0.80 / extra minute',
       '24/7 Availability',
       'Basic Call Routing',
       'Standard Voices',
-      'Setup Fee: $300',
+      'Setup Fee: $200',
     ],
     cta: 'Start Essential',
     featured: false,
   },
   {
     name: 'Performance',
-    minutes: '300 Minutes/mo',
-    price: '$150',
+    minutes: '500 Minutes/mo',
+    price: '$299',
     period: '/month',
-    setup: 'Setup Fee: $300',
     features: [
+      '500 AI minutes included',
+      '$0.80 / extra minute',
       'Advanced Call Screening',
       'Contextual Booking',
       'CRM Integration',
       'Priority Support',
-      'Setup Fee: $300',
+      'Setup Fee: $500',
     ],
     cta: 'Deploy Now',
     featured: true,
@@ -42,16 +44,17 @@ const tiers = [
   },
   {
     name: 'Enterprise',
-    minutes: '600 Minutes/mo',
-    price: '$200',
+    minutes: '1,000 Minutes/mo',
+    price: '$499',
     period: '/month',
-    setup: 'Setup Fee: $300',
     features: [
+      '1,000 AI minutes included',
+      '$0.80 / extra minute',
       'Scalable Infrastructure',
       'Custom Voices',
       'Emergency Protocol Dispatch',
       'Dedicated Manager',
-      'Setup Fee: $300',
+      'Setup Fee: $1,000',
     ],
     cta: 'Contact Sales',
     featured: false,
@@ -100,7 +103,7 @@ export default function Pricing() {
             <span className="drama-text gradient-text">constraints.</span>
           </h2>
           <p className="text-white/40 text-sm mono-text">
-            $300 Initial Configuration + simple monthly consumption.
+            One-time setup fee + simple monthly plan · $0.80 per extra minute.
           </p>
         </div>
 
