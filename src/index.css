@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Body ────────────────────────────────────────────────────────────────────── */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFBFF;
+  color: #0F0A1E;
+  font-family: 'Sora', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── Micro Interactions ──────────────────────────────────────────────────────── */
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.magnetic-btn:hover {
+  transform: scale(1.03);
+}
+.magnetic-btn span.hover-bg {
+  position: absolute;
+  top: 100%; left: 0; width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+.magnetic-btn:hover span.hover-bg {
+  top: 0;
+}
+.magnetic-btn > * {
+  position: relative;
+  z-index: 1;
+}
+.lift-hover {
+  transition: transform 0.2s ease;
+}
+.lift-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* ─── Utility classes ─────────────────────────────────────────────────────────── */
+.drama-text {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+}
+.mono-text {
+  font-family: 'Fira Code', monospace;
+}
+
+/* ─── Gradient Text ──────────────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #7B61FF 0%, #4F8FFF 60%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Primary CTA (purple) ───────────────────────────────────────────────────── */
+.btn-primary {
+  background-color: #7B61FF !important;
+  color: #ffffff !important;
+}
+.btn-primary:hover {
+  background-color: #9B8BFF !important;
+}
+
+/* ─── Glow Button ────────────────────────────────────────────────────────────── */
+.btn-glow {
+  box-shadow: 0 4px 24px rgba(123, 97, 255, 0.4), 0 2px 8px rgba(123, 97, 255, 0.25);
+  transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.btn-glow:hover {
+  box-shadow: 0 8px 40px rgba(123, 97, 255, 0.55), 0 4px 16px rgba(123, 97, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ─── Card Shadow ────────────────────────────────────────────────────────────── */
+.card-shadow {
+  box-shadow: 0 2px 12px rgba(123, 97, 255, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.card-shadow:hover {
+  box-shadow: 0 8px 32px rgba(123, 97, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F3F0FF; }
+::-webkit-scrollbar-thumb { background: #C4B5FD; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7B61FF; }
