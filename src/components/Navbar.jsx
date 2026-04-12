@@ -93,10 +93,11 @@ export default function Navbar() {
             </a>
             <a
               ref={btnRef}
-              href="#demo-call"
+              href="https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-agent-subscription-call"
+              target="_blank"
+              rel="noopener noreferrer"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              onClick={(e) => { e.preventDefault(); scrollTo('demo-call') }}
               className="magnetic-btn btn-glow btn-primary text-sm font-semibold px-4 py-2 rounded-full transition-colors duration-200"
             >
               Book a Demo
@@ -135,8 +136,9 @@ export default function Navbar() {
           {PHONE_DISPLAY}
         </a>
         <a
-          href="#demo-call"
-          onClick={(e) => { e.preventDefault(); scrollTo('demo-call') }}
+          href="https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-agent-subscription-call"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-2 btn-primary btn-glow font-semibold px-8 py-3 rounded-full text-lg"
         >
           Book a Demo

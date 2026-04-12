@@ -10,11 +10,11 @@ const sections = [
     content: [
       {
         subtitle: 'Agreement',
-        text: 'By accessing or using the AI Voice Hub platform, website, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not use our Services.',
+        text: 'By accessing or using the AI Voice Hub platform, website, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, you may not use our Services.',
       },
       {
         subtitle: 'Changes',
-        text: 'We reserve the right to modify these Terms at any time. We will provide notice of material changes by updating the date at the top of this page or via email. Continued use of the Services after changes constitutes acceptance of the revised Terms.',
+        text: 'We reserve the right to update these Terms at any time. Material changes will be communicated via email or a notice on our website. Continued use of the Services after changes are posted constitutes your acceptance.',
       },
     ],
   },
@@ -23,11 +23,15 @@ const sections = [
     content: [
       {
         subtitle: 'AI Voice Agent Platform',
-        text: 'AI Voice Hub provides an AI-powered voice agent platform that handles inbound calls, captures leads, books appointments, and automates follow-up communications on behalf of business clients.',
+        text: 'AI Voice Hub provides AI-powered voice agents for local businesses. Our agents handle inbound calls, capture leads, answer questions, and book appointments — 24 hours a day, 7 days a week.',
+      },
+      {
+        subtitle: 'Technology Stack',
+        text: 'Our platform is built on three core technologies: (1) Retell AI — which powers the voice conversations and produces call transcripts; (2) GoHighLevel (GHL) — which serves as our CRM, managing contact records, pipeline stages, and automated SMS and email follow-up sequences; and (3) n8n — which automates workflows and connects our tools together. By subscribing to our Services, you acknowledge that your data will be processed through these systems.',
       },
       {
         subtitle: 'Service Plans',
-        text: 'We offer multiple service tiers with varying features and usage limits as described on our pricing page. Your rights and obligations may vary depending on the plan you select.',
+        text: 'We offer three subscription tiers — Essential ($50/month, 100 AI minutes), Performance ($150/month, 300 AI minutes), and Enterprise ($200/month, 600 AI minutes) — each subject to a one-time $300 setup fee. Features and included minutes vary by plan as described on our pricing page.',
       },
     ],
   },
@@ -36,145 +40,182 @@ const sections = [
     content: [
       {
         subtitle: 'Account Creation',
-        text: 'To use our Services, you must create an account and provide accurate, complete, and current information. You are responsible for maintaining the security of your account credentials.',
+        text: 'To use our Services, you must provide accurate, complete, and current business information. You are responsible for keeping your account credentials secure.',
       },
       {
-        subtitle: 'Authorized Use',
-        text: 'You agree to use the Services only for lawful business purposes and in compliance with all applicable laws and regulations, including telecommunications laws in your jurisdiction.',
+        subtitle: 'Authorised Use',
+        text: 'You agree to use the Services only for lawful business purposes and in full compliance with all applicable laws, including telecommunications laws, the Telephone Consumer Protection Act (TCPA), and any regulations governing automated voice calls and text messages in your jurisdiction.',
       },
       {
         subtitle: 'Account Security',
-        text: 'You are responsible for all activity that occurs under your account. Notify us immediately at sayedakbar@aivoicehub.site if you suspect unauthorized use of your account.',
+        text: 'You are responsible for all activity under your account. Notify us immediately at sayedakbar@aivoicehub.site if you suspect unauthorised access.',
       },
     ],
   },
   {
-    title: '4. Fees & Payment',
+    title: '4. Fees, Billing & Setup',
     content: [
       {
-        subtitle: 'Billing',
-        text: 'Subscription fees are billed in advance on a monthly or annual basis depending on your selected plan. All fees are non-refundable except as expressly provided in these Terms.',
+        subtitle: 'Setup Fee',
+        text: 'All plans require a one-time $300 setup fee, which covers AI agent configuration, voice customisation, integration with your existing tools, and onboarding. This fee is non-refundable once setup has commenced.',
+      },
+      {
+        subtitle: 'Monthly Subscription',
+        text: 'Monthly subscription fees are billed in advance. Unused AI minutes do not roll over to the following month. Overages beyond your plan\'s included minutes are billed at the applicable per-minute rate.',
       },
       {
         subtitle: 'Price Changes',
-        text: 'We may change our pricing at any time. We will provide at least 30 days notice before a price increase takes effect for existing subscribers.',
+        text: 'We may adjust pricing with at least 30 days\' written notice. Price changes take effect at the start of your next billing cycle.',
       },
       {
         subtitle: 'Taxes',
-        text: 'You are responsible for all applicable taxes associated with your use of the Services. Prices displayed do not include taxes unless expressly stated.',
+        text: 'You are responsible for all applicable taxes. Displayed prices are exclusive of taxes unless stated otherwise.',
       },
     ],
   },
   {
-    title: '5. Acceptable Use',
+    title: '5. AI Minutes & Usage',
+    content: [
+      {
+        subtitle: 'Minute Calculation',
+        text: 'AI minutes are calculated based on the duration of active AI voice conversations processed through Retell AI. Call setup time and hold time may also count toward your usage depending on your configuration.',
+      },
+      {
+        subtitle: 'Overage',
+        text: 'If your account exceeds the included minutes in any billing period, additional minutes will be charged at the current overage rate. We will notify you when usage approaches your plan limit.',
+      },
+    ],
+  },
+  {
+    title: '6. Acceptable Use & Compliance',
     content: [
       {
         subtitle: 'Prohibited Conduct',
-        text: 'You may not use our Services to: (a) violate any law or regulation; (b) harass, abuse, or harm any person; (c) transmit spam or unsolicited communications; (d) interfere with or disrupt the Services or servers; (e) attempt to gain unauthorized access to any portion of the Services; or (f) use the Services for any fraudulent or deceptive purpose.',
+        text: 'You may not use our Services to: (a) violate any applicable law or regulation; (b) harass, threaten, or harm any person; (c) transmit spam or unsolicited communications; (d) interfere with or disrupt the platform; (e) attempt unauthorised access to any system; or (f) misrepresent your identity or business.',
       },
       {
-        subtitle: 'Call Compliance',
-        text: 'You are solely responsible for ensuring that your use of our AI voice agents complies with the Telephone Consumer Protection Act (TCPA), the FTC\'s Telemarketing Sales Rule, and any other applicable federal, state, or local laws governing telephone communications and automated calling.',
+        subtitle: 'TCPA & Telemarketing Compliance',
+        text: 'You are solely responsible for ensuring that your use of our AI voice agents complies with the Telephone Consumer Protection Act (TCPA), FTC Telemarketing Sales Rule, and all applicable federal, state, and local laws governing automated calls and text messages. This includes obtaining proper consent from your contacts before automated outreach is initiated via GoHighLevel SMS sequences.',
       },
       {
-        subtitle: 'Disclosure Requirements',
-        text: 'You agree to comply with all applicable legal requirements regarding disclosure of AI or automated communications to call recipients, including any requirements to disclose that a caller is speaking with an automated system.',
+        subtitle: 'AI Disclosure',
+        text: 'You agree to comply with all legal requirements regarding disclosure that a caller is interacting with an AI or automated system. Some jurisdictions require explicit disclosure at the start of a call. You are responsible for configuring your AI agent\'s script to meet these requirements.',
+      },
+      {
+        subtitle: 'SMS Compliance',
+        text: 'Automated SMS messages sent through GoHighLevel on your behalf must comply with applicable messaging laws, including including TCPA consent requirements. You must honour opt-out requests (STOP replies) immediately. We are not liable for non-compliant SMS campaigns configured by clients.',
       },
     ],
   },
   {
-    title: '6. Intellectual Property',
+    title: '7. Data Ownership & Processing',
     content: [
       {
-        subtitle: 'Our IP',
-        text: 'The Services, including all software, AI models, algorithms, interfaces, documentation, and content provided by AI Voice Hub, are owned by us or our licensors and are protected by intellectual property laws. We grant you a limited, non-exclusive, non-transferable license to use the Services for your business purposes.',
+        subtitle: 'Your Data',
+        text: 'You retain ownership of all business data, contact records, and content you provide to us. You grant AI Voice Hub a limited licence to process your data through Retell AI, GoHighLevel, and n8n solely to deliver the Services.',
+      },
+      {
+        subtitle: 'Call Data',
+        text: 'Call recordings and transcripts generated through Retell AI are your property and are made available to you through our platform. We do not use your call data to train AI models without your explicit written consent.',
+      },
+      {
+        subtitle: 'CRM Data',
+        text: 'Contact records, lead data, and pipeline information stored in GoHighLevel on your behalf remain your property. Upon termination of your account, you may export your data within 30 days before it is deleted.',
+      },
+      {
+        subtitle: 'Data Processing Agreements',
+        text: 'By using our Services, you acknowledge that your data will be processed by Retell AI, GoHighLevel, and n8n as sub-processors. Each of these platforms maintains its own data processing and security standards. Our Privacy Policy provides further detail.',
+      },
+    ],
+  },
+  {
+    title: '8. Intellectual Property',
+    content: [
+      {
+        subtitle: 'Our Platform',
+        text: 'All software, AI configurations, workflows, interfaces, and documentation developed by AI Voice Hub are our intellectual property. We grant you a limited, non-exclusive, non-transferable licence to use the Services for your internal business purposes during your subscription.',
       },
       {
         subtitle: 'Your Content',
-        text: 'You retain ownership of any content, data, or materials you provide to us through the Services ("Your Content"). You grant us a worldwide, royalty-free license to use, process, and store Your Content solely as necessary to provide the Services.',
+        text: 'You retain full ownership of your business name, scripts, branding, and any content you provide for configuration of your AI agent.',
       },
     ],
   },
   {
-    title: '7. Confidentiality',
-    content: [
-      {
-        subtitle: 'Mutual Confidentiality',
-        text: 'Each party agrees to keep confidential any non-public information disclosed by the other party in connection with the Services and to use such information only as necessary to fulfill obligations under these Terms.',
-      },
-    ],
-  },
-  {
-    title: '8. Disclaimers',
+    title: '9. Disclaimers',
     content: [
       {
         subtitle: 'As-Is Basis',
-        text: 'THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.',
+        text: 'THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.',
+      },
+      {
+        subtitle: 'Third-Party Services',
+        text: 'We are not responsible for the availability, performance, or data practices of Retell AI, GoHighLevel, or n8n. Downtime or service changes by these providers may affect the availability of our Services, and we will not be liable for resulting interruptions.',
       },
       {
         subtitle: 'No Guarantee of Results',
-        text: 'We do not guarantee any specific business results from using our Services. Lead capture rates, booking rates, and revenue outcomes vary and depend on factors outside our control.',
+        text: 'We do not guarantee specific business outcomes, lead volumes, or revenue results from using our Services. Performance depends on factors including your industry, call volume, and how you configure follow-up sequences in GoHighLevel.',
       },
     ],
   },
   {
-    title: '9. Limitation of Liability',
+    title: '10. Limitation of Liability',
     content: [
       {
-        subtitle: 'Cap on Liability',
-        text: 'TO THE MAXIMUM EXTENT PERMITTED BY LAW, AI VOICE HUB\'S TOTAL LIABILITY TO YOU FOR ANY CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE FEES PAID BY YOU IN THE THREE (3) MONTHS PRECEDING THE CLAIM.',
+        subtitle: 'Liability Cap',
+        text: 'TO THE MAXIMUM EXTENT PERMITTED BY LAW, AI VOICE HUB\'S TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THESE TERMS OR THE SERVICES SHALL NOT EXCEED THE TOTAL FEES PAID BY YOU IN THE THREE (3) MONTHS PRECEDING THE CLAIM.',
       },
       {
-        subtitle: 'Exclusion of Damages',
-        text: 'IN NO EVENT SHALL AI VOICE HUB BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.',
+        subtitle: 'Exclusion of Indirect Damages',
+        text: 'IN NO EVENT SHALL AI VOICE HUB BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES — INCLUDING LOSS OF PROFITS, LEADS, DATA, OR BUSINESS OPPORTUNITIES — EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.',
       },
     ],
   },
   {
-    title: '10. Indemnification',
+    title: '11. Indemnification',
     content: [
       {
         subtitle: 'Your Obligation',
-        text: 'You agree to indemnify, defend, and hold harmless AI Voice Hub and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys\' fees) arising out of or related to: (a) your use of the Services; (b) Your Content; (c) your violation of these Terms; or (d) your violation of any applicable law.',
+        text: 'You agree to indemnify and hold harmless AI Voice Hub and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including attorney fees) arising from: (a) your use of the Services; (b) your violation of these Terms; (c) your violation of any applicable law, including TCPA; (d) any non-compliant SMS or automated call campaigns you configure; or (e) your clients\' or contacts\' claims arising from interactions with your AI agent.',
       },
     ],
   },
   {
-    title: '11. Termination',
+    title: '12. Termination',
     content: [
       {
         subtitle: 'By You',
-        text: 'You may cancel your subscription at any time through your account settings or by contacting us. Cancellation takes effect at the end of your current billing period.',
+        text: 'You may cancel your subscription at any time by contacting us at sayedakbar@aivoicehub.site. Cancellation takes effect at the end of your current billing period. The setup fee is non-refundable.',
       },
       {
         subtitle: 'By Us',
-        text: 'We may suspend or terminate your account immediately if you breach these Terms, fail to pay fees, or use the Services in a way that poses legal or reputational risk to us. Upon termination, your right to use the Services ceases immediately.',
+        text: 'We may suspend or terminate your account immediately if you breach these Terms, fail to pay fees, or use the Services in a manner that creates legal, regulatory, or reputational risk. Upon termination, your AI agent will be deactivated and access to your data will be available for 30 days for export.',
       },
     ],
   },
   {
-    title: '12. Governing Law & Disputes',
+    title: '13. Governing Law & Disputes',
     content: [
       {
         subtitle: 'Governing Law',
-        text: 'These Terms are governed by the laws of the State of California, without regard to its conflict of law provisions.',
+        text: 'These Terms are governed by the laws of the State of California, without regard to conflict of law provisions.',
       },
       {
         subtitle: 'Dispute Resolution',
-        text: 'Any dispute arising out of or relating to these Terms or the Services shall be resolved through binding arbitration administered by the American Arbitration Association under its Commercial Arbitration Rules. The arbitration shall take place in California.',
+        text: 'Any dispute arising from these Terms shall first be addressed through good-faith negotiation. If unresolved within 30 days, disputes shall be submitted to binding arbitration under the American Arbitration Association Commercial Rules in California.',
       },
       {
         subtitle: 'Class Action Waiver',
-        text: 'You agree that any arbitration or proceeding shall be limited to the dispute between you and us individually. You waive the right to participate in any class action lawsuit or class-wide arbitration.',
+        text: 'You waive the right to participate in any class action or representative proceeding. All disputes shall be resolved on an individual basis.',
       },
     ],
   },
   {
-    title: '13. Contact Us',
+    title: '14. Contact Us',
     content: [
       {
         subtitle: 'Questions',
-        text: 'If you have any questions about these Terms of Service, please contact us at sayedakbar@aivoicehub.site or call us directly. We are happy to clarify any aspect of these terms.',
+        text: 'For questions about these Terms, billing, or your account, contact us at sayedakbar@aivoicehub.site. We aim to respond within 2 business days.',
       },
     ],
   },
@@ -209,8 +250,8 @@ export default function TermsOfService() {
           <h1 className="text-4xl md:text-5xl font-bold text-ghost leading-tight mb-4">
             Terms of Service
           </h1>
-          <p className="text-gray-500 text-lg max-w-xl leading-relaxed">
-            Please read these terms carefully before using AI Voice Hub. They govern your use of our platform and services.
+          <p className="text-gray-500 text-lg max-w-2xl leading-relaxed">
+            These Terms govern your use of AI Voice Hub's platform, including our AI voice agents powered by Retell AI, GoHighLevel CRM automation, and n8n workflow integrations.
           </p>
           <p className="text-gray-400 text-sm mt-4 font-mono">Last Updated: April 12, 2026</p>
         </div>
@@ -222,14 +263,14 @@ export default function TermsOfService() {
           {/* Intro card */}
           <div className="bg-blue-50 border-2 border-blue-200 rounded-[1.5rem] p-8 mb-10">
             <p className="text-gray-700 text-base leading-relaxed">
-              These Terms of Service ("Terms") constitute a legally binding agreement between you and AI Voice Hub
-              regarding your use of the AI Voice Hub platform, website, and associated services. These Terms apply to all
-              visitors, users, and clients. Please read them carefully.
+              These Terms of Service constitute a legally binding agreement between you and AI Voice Hub. Our platform
+              delivers AI voice agent services using <strong>Retell AI</strong> for voice conversations,{' '}
+              <strong>GoHighLevel (GHL)</strong> for CRM management and automated SMS/email follow-up, and{' '}
+              <strong>n8n</strong> for workflow automation. Please read these Terms carefully before subscribing.
             </p>
           </div>
 
-          {/* Sections */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {sections.map((section, i) => (
               <div key={i} className="bg-white border-2 border-gray-100 rounded-[1.5rem] p-8 hover:border-blue-200 hover:shadow-md transition-all duration-200">
                 <h2 className="text-xl font-bold text-ghost mb-6 pb-4 border-b border-gray-100">

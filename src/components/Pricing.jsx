@@ -5,12 +5,65 @@ import { Check } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const CAL_LINK = 'https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-agent-subscription-call'
+
+const tiers = [
+  {
+    name: 'Essential',
+    minutes: '100 Minutes/mo',
+    price: '$50',
+    period: '/month',
+    setup: 'Setup Fee: $300',
+    features: [
+      '24/7 Availability',
+      'Basic Call Routing',
+      'Standard Voices',
+      'Setup Fee: $300',
+    ],
+    cta: 'Start Essential',
+    featured: false,
+  },
+  {
+    name: 'Performance',
+    minutes: '300 Minutes/mo',
+    price: '$150',
+    period: '/month',
+    setup: 'Setup Fee: $300',
+    features: [
+      'Advanced Call Screening',
+      'Contextual Booking',
+      'CRM Integration',
+      'Priority Support',
+      'Setup Fee: $300',
+    ],
+    cta: 'Deploy Now',
+    featured: true,
+    badge: 'RECOMMENDED',
+  },
+  {
+    name: 'Enterprise',
+    minutes: '600 Minutes/mo',
+    price: '$200',
+    period: '/month',
+    setup: 'Setup Fee: $300',
+    features: [
+      'Scalable Infrastructure',
+      'Custom Voices',
+      'Emergency Protocol Dispatch',
+      'Dedicated Manager',
+      'Setup Fee: $300',
+    ],
+    cta: 'Contact Sales',
+    featured: false,
+  },
+]
+
 export default function Pricing() {
   const ref = useRef()
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.cinematic-pricing-card', {
+      gsap.from('.pricing-card', {
         scrollTrigger: { trigger: ref.current, start: 'top 80%' },
         y: 40,
         opacity: 0,
@@ -24,75 +77,121 @@ export default function Pricing() {
   }, [])
 
   return (
-    <section id="pricing" ref={ref} className="py-32 px-8 max-w-6xl mx-auto relative">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 bg-plasma/10 border border-plasma/20 rounded-full px-4 py-1.5 text-plasma text-sm font-medium mb-6">
-          Membership Tiers
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-ghost mb-4">
-          Transparent Pricing.{' '}
-          <span className="drama-text text-5xl gradient-text">No Surprises.</span>
-        </h2>
-        <p className="text-gray-500 mono-text text-sm">Deploy your AI agent exactly how you need it.</p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-        {/* Tier 1 */}
-        <div className="cinematic-pricing-card bg-white border border-purple-border rounded-[2.5rem] p-8 -mr-0 md:-mr-4 relative z-0 card-shadow">
-          <h3 className="text-xl font-bold text-ghost mb-2">Essential</h3>
-          <div className="text-3xl font-bold text-ghost mb-1">$300<span className="text-sm font-normal text-gray-400">/mo</span></div>
-          <p className="text-xs text-gray-400 mb-6">+ $300 one-time setup fee</p>
-          <ul className="space-y-3 mb-8 text-sm text-gray-600">
-            {['500 AI minutes included', 'Standard CRM integrations', 'Basic Lead Qualification', '24/7 call answering'].map(item => (
-              <li key={item} className="flex items-center gap-2.5">
-                <Check size={14} className="text-emerald-500 shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <button className="magnetic-btn w-full py-3 rounded-full border-2 border-gray-200 text-sm font-bold text-gray-600 hover:border-plasma hover:text-plasma transition-colors">
-            Select Tier
-          </button>
+    <section
+      id="pricing"
+      ref={ref}
+      className="py-32 px-6"
+      style={{ background: '#F5F0E8' }}
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2
+            className="text-5xl md:text-6xl font-bold mb-4 leading-tight"
+            style={{ fontStyle: 'italic', color: '#1a1208', letterSpacing: '-0.02em' }}
+          >
+            Scale without constraints.
+          </h2>
+          <p className="text-gray-500 text-sm">
+            $300 Initial Configuration + simple monthly consumption.
+          </p>
         </div>
 
-        {/* Tier 2 - Middle pops */}
-        <div className="cinematic-pricing-card rounded-[3rem] p-10 relative z-10 -translate-y-4 text-white"
-          style={{ background: 'linear-gradient(135deg, #7B61FF 0%, #5B3FFF 100%)', boxShadow: '0 20px 60px rgba(123, 97, 255, 0.4)' }}>
-          <div className="absolute top-0 right-10 transform -translate-y-1/2 bg-white text-plasma text-xs mono-text px-3 py-1 rounded-full font-bold shadow-md">
-            POPULAR
-          </div>
-          <h3 className="text-2xl font-bold mb-2">Performance</h3>
-          <div className="text-5xl font-bold mb-1">$800<span className="text-lg font-normal text-white/70">/mo</span></div>
-          <p className="text-xs text-white/60 mb-6">+ $300 one-time setup fee</p>
-          <ul className="space-y-3 mb-8 text-sm font-medium">
-            {['2000 AI minutes included', 'Advanced conditional logic', 'Priority CRM routing', 'SMS & Email Sequences', 'Lead Reactivation'].map(item => (
-              <li key={item} className="flex items-center gap-2.5">
-                <Check size={14} className="text-green-300 shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <button className="magnetic-btn w-full py-4 rounded-full bg-white text-sm font-bold shadow-xl hover:bg-gray-50 transition-colors" style={{ color: '#7B61FF' }}>
-            Select Tier
-          </button>
-        </div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+          {tiers.map((tier) => (
+            <div
+              key={tier.name}
+              className={`pricing-card relative rounded-3xl p-8 flex flex-col ${
+                tier.featured ? 'md:-translate-y-4' : ''
+              }`}
+              style={
+                tier.featured
+                  ? { background: '#2B3B2A', boxShadow: '0 24px 60px rgba(43,59,42,0.35)' }
+                  : { background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }
+              }
+            >
+              {/* Badge */}
+              {tier.badge && (
+                <div
+                  className="absolute -top-3.5 left-1/2 -translate-x-1/2 text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-widest"
+                  style={{ background: '#C4622D' }}
+                >
+                  {tier.badge}
+                </div>
+              )}
 
-        {/* Tier 3 */}
-        <div className="cinematic-pricing-card bg-white border border-purple-border rounded-[2.5rem] p-8 -ml-0 md:-ml-4 relative z-0 card-shadow">
-          <h3 className="text-xl font-bold text-ghost mb-2">Enterprise</h3>
-          <div className="text-3xl font-bold text-ghost mb-1">Custom</div>
-          <p className="text-xs text-gray-400 mb-6">Tailored to your scale</p>
-          <ul className="space-y-3 mb-8 text-sm text-gray-600">
-            {['Dedicated account manager', 'Unlimited AI minutes', 'Custom LLM fine-tuning', 'White-label capabilities'].map(item => (
-              <li key={item} className="flex items-center gap-2.5">
-                <Check size={14} className="text-emerald-500 shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <button className="magnetic-btn w-full py-3 rounded-full border-2 border-gray-200 text-sm font-bold text-gray-600 hover:border-plasma hover:text-plasma transition-colors">
-            Contact Us
-          </button>
+              {/* Name + minutes */}
+              <div className="mb-6">
+                <h3
+                  className="text-xl font-bold mb-1"
+                  style={{ color: tier.featured ? '#ffffff' : '#1a1208' }}
+                >
+                  {tier.name}
+                </h3>
+                <p
+                  className="text-xs font-mono"
+                  style={{ color: tier.featured ? 'rgba(255,255,255,0.5)' : '#9ca3af' }}
+                >
+                  {tier.minutes}
+                </p>
+              </div>
+
+              {/* Price */}
+              <div className="mb-8 pb-8 border-b"
+                style={{ borderColor: tier.featured ? 'rgba(255,255,255,0.12)' : '#f0ebe0' }}>
+                <span
+                  className="text-5xl font-bold"
+                  style={{ color: tier.featured ? '#ffffff' : '#1a1208' }}
+                >
+                  {tier.price}
+                </span>
+                <span
+                  className="text-sm ml-1"
+                  style={{ color: tier.featured ? 'rgba(255,255,255,0.45)' : '#9ca3af' }}
+                >
+                  {tier.period}
+                </span>
+              </div>
+
+              {/* Features */}
+              <ul className="space-y-3 mb-10 flex-1">
+                {tier.features.map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-sm">
+                    <Check
+                      size={14}
+                      className="shrink-0"
+                      style={{ color: tier.featured ? '#7EC87A' : '#10b981' }}
+                    />
+                    <span style={{ color: tier.featured ? 'rgba(255,255,255,0.8)' : '#4b5563' }}>
+                      {f}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <a
+                href={CAL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center py-3.5 rounded-full text-sm font-bold transition-all duration-200"
+                style={
+                  tier.featured
+                    ? { background: '#C4622D', color: '#ffffff' }
+                    : { background: '#1a1208', color: '#ffffff' }
+                }
+                onMouseEnter={e => {
+                  e.currentTarget.style.opacity = '0.88'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.opacity = '1'
+                }}
+              >
+                {tier.cta}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
