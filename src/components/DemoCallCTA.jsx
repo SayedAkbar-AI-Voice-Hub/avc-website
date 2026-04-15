@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Phone, ArrowRight, ChevronRight } from 'lucide-react'
+import { Phone, ArrowRight, ChevronRight, PhoneForwarded } from 'lucide-react'
 import { PHONE_HREF, PHONE_DISPLAY, services } from '../data/services'
 
 /* ─── Service-page variant (niche prop provided) ────────────────────────── */
-function NicheCTA({ niche, phoneDisplay, phoneHref }) {
+function NicheCTA({ niche }) {
   return (
     <section id="demo-call" className="py-24 px-6 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #7B61FF 0%, #5B3FFF 40%, #3B82F6 100%)' }}>
@@ -13,15 +13,16 @@ function NicheCTA({ niche, phoneDisplay, phoneHref }) {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
           Talk to Our AI Trained for {niche} Businesses
         </h2>
-        <p className="text-white/80 text-lg mb-12 max-w-xl mx-auto">
-          Experience exactly what your {niche.toLowerCase()} customers will hear when they call. Available 24/7.
+        <p className="text-white/80 text-lg mb-6 max-w-xl mx-auto">
+          Call our main voice agent and ask for the <span className="font-semibold text-white">{niche}</span> demo — it transfers you straight to the sub-agent trained for your industry.
         </p>
-        <CallButton phone={phoneDisplay} href={phoneHref} />
+        <TransferNote niche={niche} />
+        <CallButton phone={PHONE_DISPLAY} href={PHONE_HREF} />
         <p className="text-white/70 text-sm flex items-center justify-center gap-2 mono-text mt-6">
           <ArrowRight size={14} />
-          Call now — the AI picks up instantly, 24/7
+          Main agent picks up instantly, 24/7 — then transfers to {niche}
         </p>
-        <MockPhone phone={phoneDisplay} niche={niche} />
+        <MockPhone niche={niche} />
       </div>
     </section>
   )
@@ -43,15 +44,24 @@ function PickerCTA() {
         <div className="text-center mb-10">
           <LiveBadge />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Try the AI Live — Pick Your Industry
+            Try the AI Live — One Number, Every Industry
           </h2>
           <p className="text-white/80 text-lg max-w-xl mx-auto">
-            Each AI is trained specifically for your industry. Select yours below to get the right demo number.
+            Call our main voice agent. Pick your industry below to see which sub-agent it will transfer you to.
+          </p>
+        </div>
+
+        {/* Always-visible main number */}
+        <div className="flex flex-col items-center gap-4 mb-10">
+          <CallButton phone={PHONE_DISPLAY} href={PHONE_HREF} />
+          <p className="text-white/70 text-sm flex items-center gap-2 mono-text">
+            <ArrowRight size={14} />
+            Main agent answers instantly, 24/7 — then routes to the sub-agent you pick
           </p>
         </div>
 
         {/* Industry grid */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-10">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-8">
           {services.map(s => (
             <button
               key={s.slug}
@@ -67,44 +77,27 @@ function PickerCTA() {
           ))}
         </div>
 
-        {/* Revealed call card */}
+        {/* Revealed transfer card */}
         <div className={`transition-all duration-500 ${selected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
           {service && (
             <div className="flex flex-col items-center gap-6">
-              {/* Industry label */}
               <div className="flex items-center gap-2 text-white/70 text-sm">
                 <ChevronRight size={14} />
+                <span>You'll be transferred to the</span>
                 <span className="font-semibold text-white">{service.name}</span>
-                <span>AI demo line</span>
+                <span>sub-agent</span>
               </div>
 
-              <CallButton
-                phone={service.phoneDisplay || PHONE_DISPLAY}
-                href={service.phoneHref || PHONE_HREF}
-              />
-
-              <p className="text-white/70 text-sm flex items-center gap-2 mono-text">
-                <ArrowRight size={14} />
-                The {service.name.toLowerCase()} AI picks up instantly, 24/7
-              </p>
-
-              <MockPhone
-                phone={service.phoneDisplay || PHONE_DISPLAY}
-                niche={service.name}
-              />
+              <MockPhone niche={service.name} />
             </div>
           )}
 
-          {/* Placeholder when nothing selected yet (keeps layout stable) */}
-          {!service && (
-            <div className="h-64" />
-          )}
+          {!service && <div className="h-64" />}
         </div>
 
-        {/* Prompt when nothing selected */}
         {!selected && (
           <p className="text-center text-white/50 text-sm mono-text mt-2">
-            ↑ Select an industry above to reveal your demo number
+            ↑ Select an industry above to preview its sub-agent
           </p>
         )}
       </div>
@@ -136,6 +129,15 @@ function LiveBadge() {
   )
 }
 
+function TransferNote({ niche }) {
+  return (
+    <div className="inline-flex items-center gap-2 bg-white/10 border border-white/25 rounded-full px-4 py-1.5 text-white/90 text-xs font-medium mb-8 mono-text">
+      <PhoneForwarded size={14} />
+      Main agent → transfers to {niche} sub-agent
+    </div>
+  )
+}
+
 function CallButton({ phone, href }) {
   return (
     <a href={href} className="relative inline-flex items-center justify-center group">
@@ -149,7 +151,7 @@ function CallButton({ phone, href }) {
   )
 }
 
-function MockPhone({ phone, niche }) {
+function MockPhone({ niche }) {
   return (
     <div className="mt-10 max-w-xs mx-auto">
       <div className="bg-white/10 backdrop-blur border border-white/20 rounded-[2rem] p-6 text-left">
@@ -158,8 +160,8 @@ function MockPhone({ phone, niche }) {
             <Phone size={18} className="text-white" />
           </div>
           <div>
-            <p className="text-white font-semibold text-sm">{niche ? `${niche} AI` : 'AI Voice Hub'}</p>
-            <p className="text-white/50 text-xs mono-text">{phone}</p>
+            <p className="text-white font-semibold text-sm">AI Voice Hub</p>
+            <p className="text-white/50 text-xs mono-text">{PHONE_DISPLAY}</p>
           </div>
           <div className="ml-auto">
             <span className="relative flex h-2.5 w-2.5">
@@ -171,11 +173,24 @@ function MockPhone({ phone, niche }) {
         <div className="space-y-2">
           <div className="bg-white/10 rounded-xl rounded-tl-sm p-3 border border-white/15">
             <p className="text-white/80 text-xs leading-relaxed">
-              {niche
-                ? `"Thank you for calling. I'm the AI assistant for ${niche.toLowerCase()} businesses — how can I help you today?"`
-                : '"Thank you for calling. I\'m the AI assistant — how can I help you today?"'}
+              "Thanks for calling the AI Voice Hub. Which industry demo would you like to try today?"
             </p>
           </div>
+          {niche && (
+            <>
+              <div className="bg-white/20 rounded-xl rounded-tr-sm p-3 border border-white/20 ml-6">
+                <p className="text-white/90 text-xs leading-relaxed">
+                  "{niche}."
+                </p>
+              </div>
+              <div className="bg-white/10 rounded-xl rounded-tl-sm p-3 border border-white/15">
+                <p className="text-white/80 text-xs leading-relaxed flex items-start gap-1.5">
+                  <PhoneForwarded size={12} className="mt-0.5 flex-shrink-0" />
+                  <span>"Transferring you to the {niche.toLowerCase()} sub-agent now…"</span>
+                </p>
+              </div>
+            </>
+          )}
           <div className="flex items-center gap-1.5 pl-2">
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-bounce [animation-delay:0ms]" />
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-bounce [animation-delay:150ms]" />
@@ -189,19 +204,6 @@ function MockPhone({ phone, niche }) {
 
 /* ─── Main export ────────────────────────────────────────────────────────── */
 export default function DemoCallCTA({ niche }) {
-  if (niche) {
-    // Find matching service for its specific phone number
-    const service = services.find(
-      s => s.name.toLowerCase() === niche.toLowerCase()
-    )
-    return (
-      <NicheCTA
-        niche={niche}
-        phoneDisplay={service?.phoneDisplay || PHONE_DISPLAY}
-        phoneHref={service?.phoneHref || PHONE_HREF}
-      />
-    )
-  }
-
+  if (niche) return <NicheCTA niche={niche} />
   return <PickerCTA />
 }

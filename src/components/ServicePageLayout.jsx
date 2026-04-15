@@ -5,7 +5,7 @@ import {
   FileX, Wrench, HardHat, Clock, GitBranch, MessageSquare, Hammer,
   RefreshCw, CheckCircle, ArrowLeft, ChevronRight, ShieldCheck,
   Bot, Mic, CalendarClock, BarChart3, Mail, Check, ArrowRight,
-  AlertCircle, Truck
+  AlertCircle, Truck, Car, GraduationCap, DollarSign
 } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger)
 const iconMap = {
   Phone, PhoneOff, Filter, CalendarX, Moon, TrendingDown, Zap,
   FileX, Wrench, HardHat, Clock, GitBranch, MessageSquare, Hammer,
-  RefreshCw, CheckCircle, ShieldCheck, Truck,
+  RefreshCw, CheckCircle, ShieldCheck, Truck, Car, GraduationCap, DollarSign,
 }
 
 function NicheIcon({ name, size = 24, className }) {

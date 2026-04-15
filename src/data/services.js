@@ -2,14 +2,12 @@ export const PHONE = '+1(510)634-7901'
 export const PHONE_DISPLAY = '+1 (510) 634-7901'
 export const PHONE_HREF = 'tel:+15106347901'
 
-// Per-niche demo numbers — replace each phoneHref / phoneDisplay with the
-// real trained number for that industry when ready.
+// Single main voice agent number (PHONE_HREF / PHONE_DISPLAY above).
+// Callers are transferred to the per-niche sub-agent after selecting an industry.
 export const services = [
   {
     slug: 'real-estate',
     name: 'Real Estate',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Never miss a weekend lead again',
     heroHeadline: 'Stop Losing Weekend Leads to Your Competition',
     heroSubtext: 'Real estate moves fast. Your AI receptionist is available every evening, every weekend — qualifying buyers and scheduling showings the moment they call.',
@@ -55,8 +53,6 @@ export const services = [
   {
     slug: 'dental',
     name: 'Dental Clinics',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Fill your schedule, reduce no-shows',
     heroHeadline: 'Your Front Desk Can\'t Answer Every Call. Your AI Can.',
     heroSubtext: 'New patient acquisition happens at the moment someone picks up the phone. Don\'t let after-hours calls, hold times, or overwhelmed staff cost you $10,000+ patients.',
@@ -102,8 +98,6 @@ export const services = [
   {
     slug: 'auto-dealerships',
     name: 'Auto Dealerships',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Capture leads while showroom is closed',
     heroHeadline: 'Car Shoppers Browse at Night. Your AI Never Clocks Out.',
     heroSubtext: 'The modern car buyer researches online until 10pm and calls when the impulse strikes. Your AI captures that lead, answers inventory questions, and schedules the test drive.',
@@ -149,8 +143,6 @@ export const services = [
   {
     slug: 'hvac',
     name: 'HVAC',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Answer every emergency, fill every slot',
     heroHeadline: 'Emergency HVAC Calls at 2am Shouldn\'t Go to Voicemail',
     heroSubtext: 'When a homeowner\'s furnace dies in January or AC fails in July, they call every HVAC company until someone answers. Your AI answers first — every time.',
@@ -196,8 +188,6 @@ export const services = [
   {
     slug: 'plumbing',
     name: 'Plumbing',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'First to answer wins the emergency job',
     heroHeadline: 'A Burst Pipe at 3am Is Your Most Profitable Call — If You Answer It',
     heroSubtext: 'Plumbing emergencies don\'t wait for business hours. Your AI handles the call, captures the details, and dispatches your on-call plumber before your competitor even wakes up.',
@@ -243,8 +233,6 @@ export const services = [
   {
     slug: 'landscaping',
     name: 'Landscaping',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Fill your estimate calendar on autopilot',
     heroHeadline: 'Stop Losing Landscaping Leads to a Missed Call',
     heroSubtext: 'Property owners decide who to call in the spring. Your AI answers every inquiry, qualifies budget and scope, and books your estimate appointments — even during your busiest weeks.',
@@ -290,8 +278,6 @@ export const services = [
   {
     slug: 'construction',
     name: 'Construction Companies',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Never lose a bid to a slow response',
     heroHeadline: 'You\'re Running a Job Site. Your AI Is Running Your Phones.',
     heroSubtext: 'New project inquiries don\'t wait while you\'re on-site. Your AI captures every lead, qualifies project scope, and schedules consultations — so you never lose a bid to a slow response.',
@@ -337,8 +323,6 @@ export const services = [
   {
     slug: 'electrical',
     name: 'Electrical',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Emergency coverage around the clock',
     heroHeadline: 'Electrical Emergencies Can\'t Wait. Neither Can Your Leads.',
     heroSubtext: 'From 3am panel failures to commercial wiring quotes, your AI handles every call with the professionalism your license demands — 24 hours a day.',
@@ -384,8 +368,6 @@ export const services = [
   {
     slug: 'roofing',
     name: 'Roofing',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Handle storm surge without adding staff',
     heroHeadline: 'Storm Damage Calls Surge. Your AI Is Ready for All of Them.',
     heroSubtext: 'After every major storm, homeowners panic-call every roofing contractor they can find. Your AI answers every single call, captures every lead, and books every inspection — while your competitors\' phones ring out.',
@@ -431,8 +413,6 @@ export const services = [
   {
     slug: 'cleaning',
     name: 'Cleaning',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Book more clients, filter price shoppers',
     heroHeadline: 'Turn More Callers into Paying Cleaning Clients',
     heroSubtext: 'Not every caller becomes a client — but your AI qualifies serious buyers from price shoppers, captures recurring service interest, and books first appointments automatically.',
@@ -478,8 +458,6 @@ export const services = [
   {
     slug: 'medical',
     name: 'Medical Practices',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Keep your front desk focused on patients, not phones',
     heroHeadline: 'Your Front Desk Is Overwhelmed. Your Patients Can\'t Wait.',
     heroSubtext: 'Missed calls at a medical practice aren\'t just lost revenue — they\'re patients who couldn\'t get help. Your AI answers every call, handles appointment booking, and routes urgent situations instantly.',
@@ -525,8 +503,6 @@ export const services = [
   {
     slug: 'transportation',
     name: 'Transportation & Logistics',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Dispatch faster, miss fewer loads',
     heroHeadline: 'Every Load Missed Is Money Left on the Road',
     heroSubtext: 'Shippers call when they have freight. Drivers call when they need direction. Your AI handles all of it — qualifying loads, dispatching drivers, and capturing every opportunity before your competitor does.',
@@ -572,8 +548,6 @@ export const services = [
   {
     slug: 'insurance',
     name: 'Insurance Agencies',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
     tagline: 'Quote more clients, retain more policies',
     heroHeadline: 'Insurance Shoppers Won\'t Wait for a Callback. Your AI Won\'t Make Them.',
     heroSubtext: 'Someone shopping for insurance is making a decision within hours. Your AI answers immediately, qualifies their coverage needs, and connects serious prospects to your agents before they buy from someone else.',
@@ -617,50 +591,75 @@ export const services = [
     ],
   },
   {
-    slug: 'local-service',
-    name: 'Local Service Businesses',
-    phoneDisplay: '+1 (510) 634-7901',
-    phoneHref: 'tel:+15106347901',
-    tagline: 'Every missed call is revenue lost forever',
-    heroHeadline: 'Every Missed Call Is Revenue You\'ll Never Get Back',
-    heroSubtext: 'Whether you\'re a handyman, painter, or any local service business, your AI answers every call, qualifies every lead, and fills your schedule — even when you\'re on the job.',
+    slug: 'driving-schools',
+    name: 'Driving Schools',
+    tagline: 'Book more students, miss zero calls',
+    heroHeadline: 'Your Instructors Are Behind the Wheel — Your AI Is on the Phone',
+    heroSubtext: 'Parents and new drivers call during the day, after school, and on weekends to book lessons. While your instructors are teaching, your AI answers every call, books lessons into your schedule, and stops you losing students to the school across town.',
     painPoints: [
       {
-        icon: 'Hammer',
-        title: 'Calls Missed While You\'re Working',
-        description: 'You are the business. When you\'re on a job, you can\'t answer the phone. But the person calling isn\'t going to wait — they\'re already dialing the next number on their Google search.',
+        icon: 'Car',
+        title: 'Instructors Can\'t Answer the Phone While Teaching',
+        description: 'You\'re in the passenger seat coaching a nervous teen through a three-point turn — you can\'t pick up. That parent calling to book a package? They\'re already dialing the next school on Google. Every missed call is a $400–$800 student walking away.',
       },
       {
         icon: 'Moon',
-        title: 'After-Hours Means Lost Business',
-        description: 'Most people look for local services in the evenings after work. That\'s precisely when you\'re unavailable. AI captures every lead outside business hours automatically.',
+        title: 'Parents Call After Work — When You\'re Closed',
+        description: 'The decision to enroll a teen happens at the dinner table at 7pm. By 9am the next morning, half of them have moved on. AI answers in the evenings, on weekends, and over school holidays — when your competitors\' phones go to voicemail.',
+      },
+      {
+        icon: 'CalendarX',
+        title: 'No-Shows and Last-Minute Cancellations Burn Hours',
+        description: 'A no-show on a 2-hour lesson costs you the slot, the instructor\'s time, and the gas. Manual reminder calls eat your admin time. Automated SMS + voice reminders cut no-shows dramatically and keep your calendar earning.',
+      },
+      {
+        icon: 'DollarSign',
+        title: 'Hiring a Receptionist Costs More Than It Earns',
+        description: 'A part-time front desk costs $2,500–$4,000/month before they\'ve booked a single lesson. AI handles every call, every booking, and every reminder for a fraction of that — and never takes a sick day.',
+      },
+      {
+        icon: 'Filter',
+        title: 'Price Shoppers Drain Your Day',
+        description: '"How much for a package?" calls take 10 minutes each and rarely convert. AI quotes packages instantly, qualifies serious students, and only escalates the ones ready to book.',
       },
       {
         icon: 'FileX',
-        title: 'No Systematic Follow-Up Process',
-        description: 'You gave someone an estimate two weeks ago and haven\'t heard back. You meant to follow up. AI never forgets — automated sequences follow up on every lead at the right time.',
+        title: 'Road Test Prep & Renewal Reminders Slip Through',
+        description: 'A student who finished beginner lessons last month is your easiest road-test-prep upsell — if you remember to call. AI runs automated follow-up sequences so you upsell every student at the right moment.',
       },
     ],
     solutions: [
       {
-        title: 'Always-Available Professional Intake',
-        description: 'AI answers as your business, collects the job details, location, and preferred scheduling, and delivers a complete lead brief to you — every call, every time.',
+        title: 'Every Call Answered While You\'re on the Road',
+        description: 'AI answers as your driving school 24/7, collects student name, age, license stage (learner/permit/road test prep), preferred lesson times, and package interest — then drops a complete lead summary into your inbox.',
       },
       {
-        title: 'After-Hours Lead Capture',
-        description: 'Prospect calls after 6pm get the same professional response as a daytime call. Nothing falls through the cracks because you were off the clock.',
+        title: 'Real-Time Lesson Booking',
+        description: 'AI checks your live calendar and books lessons directly into open instructor slots — including pickup address, lesson type (in-car, highway, road test prep), and duration. The student gets confirmation via SMS instantly.',
       },
       {
-        title: 'Automated Follow-Up for Every Lead',
-        description: 'Every inquiry automatically enters a follow-up sequence. You focus on the work. AI focuses on not letting leads go cold.',
+        title: 'No-Show Killer Reminder Sequences',
+        description: 'Automatic SMS + voice reminders 48h, 24h, and 2h before every lesson with one-tap confirm or reschedule. Cancelled slots are released to your waitlist automatically — your calendar stays full and earning.',
+      },
+      {
+        title: 'Package Pricing & Payment Capture',
+        description: 'AI quotes your packages (single lessons, bundles, road test prep) in natural conversation, sends a payment link via SMS, and books the first lesson — turning a 10-minute price call into a paid booking in under 2 minutes.',
+      },
+      {
+        title: 'Save Thousands vs. Hiring a Receptionist',
+        description: 'Replace a $3,000/month front desk with an AI that works 24/7, handles unlimited simultaneous calls, never forgets a follow-up, and costs a fraction of one human salary. The math pays for itself in the first month.',
+      },
+      {
+        title: 'Automated Upsell & Re-engagement',
+        description: 'Students who finished beginner lessons get an automated nudge for road test prep. Permit holders nearing test date get a road-test-package offer. Lapsed leads get a reactivation message. Revenue you would have left on the table.',
       },
     ],
     callFlow: [
-      { step: 1, text: 'Prospective client calls about a service need' },
-      { step: 2, text: 'AI greets them professionally as your business' },
-      { step: 3, text: 'Collects: job type, location, urgency, preferred timing, contact info' },
-      { step: 4, text: 'Appointment or estimate call scheduled' },
-      { step: 5, text: 'Follow-up sequence activated until job is booked or declined' },
+      { step: 1, text: 'Parent or new driver calls about lessons — AI answers as your driving school' },
+      { step: 2, text: 'AI qualifies: student age, license stage, location, package interest, schedule preferences' },
+      { step: 3, text: 'Package pricing quoted, payment link sent via SMS, first lesson booked into instructor calendar' },
+      { step: 4, text: 'SMS confirmation + reminder sequence (48h / 24h / 2h) activated to kill no-shows' },
+      { step: 5, text: 'Post-lesson upsell sequence triggers road test prep offer at the right moment' },
     ],
   },
 ]
